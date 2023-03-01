@@ -76,10 +76,10 @@ for file in file_list:
         # Delete all the objects
         bpy.ops.object.select_all(action="SELECT")
         bpy.ops.object.delete()
-        print ("\n\n removed all objects")
+        print("\n\n removed all objects")
         for ob in scene.objects:
             print(ob.name)
-        print ("\n\n")
+        print("\n\n")
         # Remove all the materials
         for material in bpy.data.materials:
             bpy.data.materials[material.name].user_clear()

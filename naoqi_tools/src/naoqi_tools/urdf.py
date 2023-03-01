@@ -808,7 +808,7 @@ class Actuator(object):
             if child.localName == 'mechanicalReduction':
                 actuator.mechanicalReduction = str(child.childNodes[0].nodeValue)
             else:
-                print'Unknown actuator element ' + str(child.localName)
+                print('Unknown actuator element ' + str(child.localName))
         return actuator
 
     def to_xml(self, doc):

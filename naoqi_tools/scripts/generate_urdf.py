@@ -121,7 +121,7 @@ def REP120_compatibility():
         for link in robot.links.keys():
             try:
                 robot.rename_link(link, LINKS_DICO[link])
-            except KeyError, ValueError:
+            except (KeyError, ValueError):
                 pass
 
     if NAME == 'romeo':
@@ -553,7 +553,7 @@ def export_list_to_xacro(list, filename):
     root = doc.createElement('robot')
     doc.appendChild(root)
     root.setAttribute("xmlns:xacro", "http://www.ros.org/wiki/xacro")
-    print ('exporting ' + os.path.basename(filename))
+    print('exporting ' + os.path.basename(filename))
     for string in list:
         for link in robot.links:
             if robot.links[link].name.find(string) != -1:

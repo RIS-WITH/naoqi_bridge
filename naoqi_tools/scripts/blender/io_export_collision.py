@@ -59,7 +59,7 @@ for file in file_list:
             # Apply decimation
             bpy.ops.object.modifier_apply(apply_as='DATA')
         else:
-            print (" does not have enough vertices for DECIMATION")
+            print(" does not have enough vertices for DECIMATION")
         # Export them
         bpy.ops.export_mesh.stl(filepath=os.path.join(output_dir,
                                                       file[0:file.find('.dae')]
